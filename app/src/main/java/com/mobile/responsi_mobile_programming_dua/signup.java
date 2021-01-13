@@ -51,7 +51,6 @@ public class signup extends AppCompatActivity {
                         if (username.equals(spuser) && password.equals(sppass)) {
                             Intent b = new Intent(signup.this, drawer.class);
                             sharedprefmanager.saveIsLogin(true);
-                            finishAffinity();
                             startActivity(b);
                         } else {
                             loginn.setVisibility(View.GONE);

@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent a = new Intent(MainActivity.this,signup.class);
+                startActivity(a);
             }
         });
     }
@@ -60,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                         if (username.equals(spuser)&&password.equals(sppass)){
                             Intent b = new Intent(MainActivity.this,drawer.class);
                             sharedprefmanager.saveIsLogin(true);
-                            finishAffinity();
                             startActivity(b);
                         }else{
                             button.setVisibility(View.GONE);
